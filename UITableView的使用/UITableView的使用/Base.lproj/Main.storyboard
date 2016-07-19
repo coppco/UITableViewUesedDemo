@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6of-ik-K8B">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--UITableView-->
+        <scene sceneID="M2a-VI-f7F">
+            <objects>
+                <tableViewController id="UFZ-A5-6sH" customClass="ViewController" customModule="UITableView的使用" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" id="vMp-2y-VHJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="o8a-zE-16z">
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8a-zE-16z" id="7V6-jw-gKq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weixin.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Kv-LS-CaI">
+                                            <rect key="frame" x="5" y="5" width="69.5" height="69.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="4Kv-LS-CaI" secondAttribute="height" multiplier="15:15" id="JCv-yW-KyX"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="侧滑按钮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIF-D4-hzQ">
+                                            <rect key="frame" x="96" y="8" width="190" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="多行编辑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJd-Mh-A9t">
+                                            <rect key="frame" x="96" y="43" width="190" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4Kv-LS-CaI" firstAttribute="top" secondItem="7V6-jw-gKq" secondAttribute="top" constant="5" id="94r-bG-lSp"/>
+                                        <constraint firstItem="4Kv-LS-CaI" firstAttribute="leading" secondItem="7V6-jw-gKq" secondAttribute="leading" constant="5" id="Bnj-xr-zOP"/>
+                                        <constraint firstAttribute="bottom" secondItem="4Kv-LS-CaI" secondAttribute="bottom" constant="5" id="p9h-9a-0Mz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UFZ-A5-6sH" id="F9L-vh-eaM"/>
+                            <outlet property="delegate" destination="UFZ-A5-6sH" id="F9n-Fc-4t7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="UITableView" id="bEC-Mp-Za8">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="x4N-RG-Ww4">
+                            <button key="customView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1uQ-Yc-XOF">
+                                <rect key="frame" x="20" y="5" width="50" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="全选">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="全不选"/>
+                                <connections>
+                                    <action selector="all:" destination="UFZ-A5-6sH" eventType="touchUpInside" id="8Xt-7u-q78"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="编辑" id="7wN-Ba-ojY">
+                            <connections>
+                                <action selector="change:" destination="UFZ-A5-6sH" id="oMI-jX-Z3s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="allSelect" destination="1uQ-Yc-XOF" id="3lk-S6-yeU"/>
+                        <outlet property="editingButton" destination="7wN-Ba-ojY" id="Kcb-03-Gdv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4O-1G-zCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="390"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Hm-xL-aBU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6of-ik-K8B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mph-T6-a5h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UFZ-A5-6sH" kind="relationship" relationship="rootViewController" id="npc-zB-ek9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeZ-gl-XmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352" y="390"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weixin.png" width="200" height="200"/>
+    </resources>
+</document>
